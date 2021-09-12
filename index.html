@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSP App Big</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+    <div class="navbar none">
+        <span><a style="color:black; cursor: pointer;" onclick="logout()">W</a>elcome in WSP</span>
+        <ul>
+            <li>
+                <a href="#">Help</a>
+            </li>
+            <li>
+                <a href="#">Product</a>
+            </li>
+            <li>
+                <a href="#">Store</a>
+            </li>
+            <li>
+                <a href="#">Pricing</a>
+            </li>
+            <li>
+                <a href="#">Home</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content none">
+        <div class="img">
+            <img src="imgs/computer.jpg" alt="">
+            <div class="content-img">
+                <h1>Wisam Website Best</h1>
+                <p>
+                    Hello this website best website
+                    my name is wisam noe we will go
+                    to the tecnolgy this course will
+                    learn all things from this website
+                </p>
+                <div class="buttons">
+                    <button class="frist-btn">Free</button>
+                    <button class="second-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <h1>This Card</h1>
+                <p>
+                    This Card For If You Want To Learn Any Language
+                    This Card For If You Want To Learn Any Language
+                    This Card For If You Want To Learn Any Language
+                </p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="card">
+                <h1>This Card</h1>
+                <p>
+                    This Card For If You Want To Learn Any Language
+                    This Card For If You Want To Learn Any Language
+                    This Card For If You Want To Learn Any Language
+                </p>
+                <a href="#">Read more</a>
+            </div>
+            <div class="card">
+                <h1>This Card</h1>
+                <p>
+                    This Card For If You Want To Learn Any Language
+                    This Card For If You Want To Learn Any Language
+                    This Card For If You Want To Learn Any Language
+                </p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer none">
+        <form>
+            <div class="inputp inputs-50">
+                <input type="text" placeholder="Frist Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="inputp inputs-33">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="User">
+                <input type="text" placeholder="Phone">
+            </div>
+        </form>
+    </div>
+    <div class="login">
+        <input type="text" placeholder="User" id="user" class="w-100"><br /><br />
+        <input type="password" placeholder="Password" id="password" class="w-100"><br /><br />
+        <button class="btn-login w-100" onclick="login(this)">Login</button>
+    </div>
+    <script>
+        function login(ele) {
+            var getallnone = document.querySelectorAll(".none");
+            getallnone.forEach(ele => { ele.classList.remove("none") });
+            ele.parentElement.classList.add("none");
+        }
+        function logout() {
+            document.querySelector(".none").classList.remove("none");
+            var getallnone = [document.querySelector(".navbar"),document.querySelector(".content"),document.querySelector(".footer")];
+            getallnone.forEach(ele => { ele.classList.add("none") });
+        }
+    </script>
+</body>
+
+</html>
